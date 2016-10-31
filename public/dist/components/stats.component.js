@@ -9,16 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var HostComponent = (function () {
-    function HostComponent() {
+var StatsComponent = (function () {
+    function StatsComponent() {
     }
-    HostComponent = __decorate([
+    StatsComponent = __decorate([
         core_1.Component({
-            selector: 'host',
-            templateUrl: './templates/host.component.html'
+            selector: 'stats',
+            templateUrl: './templates/stats.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], HostComponent);
-    return HostComponent;
+    ], StatsComponent);
+    return StatsComponent;
 }());
-exports.HostComponent = HostComponent;
+exports.StatsComponent = StatsComponent;

@@ -1,9 +1,10 @@
 <html>
-
 <head>
+    <base href="/">
     <title>GoldMinerPulse</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
 </head>
 <!-- 1. Display the application -->
@@ -21,6 +22,10 @@
 <script src="node_modules/reflect-metadata/Reflect.js"></script>
 <script src="node_modules/systemjs/dist/system.src.js"></script>
 
+<!-- Other Libraries -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 <!-- 3. Configure SystemJS -->
 <script src="systemjs.config.js"></script>
 <script>
@@ -28,5 +33,4 @@
         console.error(err);
     });
 </script>
-
 </html>
