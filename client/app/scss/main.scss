@@ -1,4 +1,13 @@
+@import 'config/variables';
+
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     font-size: 21px;
-    padding-top: 4em;
+    @include leader(3);
+    padding-left: 2em;
+    padding-right: 2em;
 }

@@ -1,7 +1,6 @@
 /* Header css */
 
 @import 'config/variables';
-
 .navbar {
     background-color: $gold;
     padding-left: 2em;
@@ -22,14 +21,13 @@
         font-family: $header-font-stack;
         text-transform: uppercase;
         font-weight: 700;
-         &:hover {
+        &:hover {
             color: complement($gold) !important;
         }
     }
-    .current{
+    .current {
         color: lighten($beige-light, 10%) !important;
         background-color: transparent !important;
-        
         &:hover {
             color: $beige-light !important;
         }
@@ -40,3 +38,20 @@
     }
 }
 
+#main-container {
+    margin-right: 0;
+}
+
+.top-banner {
+    display: flex;
+    justify-content: center;
+    @include trailer(3);
+}
+
+.side-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}

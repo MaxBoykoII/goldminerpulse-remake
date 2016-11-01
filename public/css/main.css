@@ -1,4 +1,16 @@
+html {
+  font-size: 131.25%;
+  line-height: 1.5em;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 21px;
-  padding-top: 4em;
+  margin-top: 4.5em;
+  padding-left: 2em;
+  padding-right: 2em;
 }

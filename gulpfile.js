@@ -46,13 +46,16 @@ gulp.task('compile:ts', ['clean:dist'], () => {
 }); */
 
 gulp.task('compile:scss', function() {
-  gulp.src('./client/app/scss/*.scss')
-    .pipe($.compass({
-      css: './public/css',
-      sass: './client/app/scss',
-       require: ['modular-scale']
-    }))
-    .pipe(gulp.dest('./public/css'));
+    gulp.src('./client/app/scss/*.scss')
+        .pipe($.compass({
+            css: './public/css',
+            sass: './client/app/scss',
+            require: ['modular-scale']
+        }))
+        .pipe($.autoprefixer({
+            browsers: ['last 3 version', '>0.5%']
+        }))
+        .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('build', () => {
