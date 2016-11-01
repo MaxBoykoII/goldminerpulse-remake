@@ -1,6 +1,7 @@
-/* Header css */
-
 @import 'config/variables';
+
+/* Header Styles */
+
 .navbar {
     background-color: $gold;
     padding-left: 2em;
@@ -42,10 +43,15 @@
     margin-right: 0;
 }
 
+
+/* Banner Positioning */
+
 .top-banner {
     display: flex;
     justify-content: center;
-    @include trailer(3);
+    @media screen and (min-width: $mobile-breakpoint + 1px) {
+        @include trailer(3);
+    }
 }
 
 .side-banner {
@@ -54,4 +60,25 @@
     justify-content: center;
     align-items: center;
     padding: 1em;
+}
+
+
+/* Footer Styles */
+
+footer {
+    background-color: $dark-grey;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    .small-paragraph {
+        @include adjust-font-size-to(ms(-1));
+        @include leader(1, ms(-1)*1/(1em) *$base-font-size);
+    }
+    p,
+    .small-paragraph,
+    h4 {
+        color: $grey;
+    }
 }

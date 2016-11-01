@@ -1,5 +1,4 @@
 @import 'config/variables';
-
 html,
 body {
     overflow-x: hidden;
@@ -7,7 +6,25 @@ body {
 
 body {
     font-size: 21px;
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 16px;
+    }
     @include leader(3);
     padding-left: 2em;
     padding-right: 2em;
+}
+
+h2 {
+    @include adjust-font-size-to(ms(3));
+    @include leader(1, ms(3)*1/(1em) *$base-font-size);
+}
+
+h3 {
+    @include adjust-font-size-to(ms(2));
+    @include leader(1, ms(2)*1/(1em) *$base-font-size);
+}
+
+h4 {
+    @include adjust-font-size-to(ms(1));
+    @include leader(1, ms(1)*1/(1em) *$base-font-size);
 }
