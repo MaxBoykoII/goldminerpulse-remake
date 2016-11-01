@@ -15,7 +15,8 @@ var StatsComponent = (function () {
     StatsComponent = __decorate([
         core_1.Component({
             selector: 'stats',
-            templateUrl: './templates/stats.component.html'
+            templateUrl: './templates/stats.component.html',
+            styleUrls: ['./css/stats.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], StatsComponent);

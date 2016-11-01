@@ -36,13 +36,23 @@ gulp.task('compile:ts', ['clean:dist'], () => {
         .pipe(gulp.dest('./public/dist'));
 });
 
-gulp.task('compile:scss', () => {
+/* gulp.task('compile:scss', () => {
     return gulp.src('./client/app/scss/**.scss')
         .pipe($.sass().on('error', $.sass.logError))
         .pipe($.autoprefixer({
             browsers: ['last 3 version', '>0.5%']
         }))
         .pipe(gulp.dest('./public/css'));
+}); */
+
+gulp.task('compile:scss', function() {
+  gulp.src('./client/app/scss/*.scss')
+    .pipe($.compass({
+      css: './public/css',
+      sass: './client/app/scss',
+       require: ['modular-scale']
+    }))
+    .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('build', () => {

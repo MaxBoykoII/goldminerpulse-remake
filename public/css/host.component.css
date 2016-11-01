@@ -1,33 +1,42 @@
 /* Header css */
+html {
+  font-size: 131.25%;
+  line-height: 1.5em;
+}
+
 .navbar {
   background-color: #CEAC41;
   padding-left: 2em;
   padding-right: 2em;
-  padding-top: 1em; }
-  .navbar .navbar-brand {
-    text-transform: none;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .navbar .navbar-brand span {
-      padding-left: 0.33333em;
-      color: white;
-      line-height: 1.1810em; }
-  .navbar a {
-    color: #ebdeb8 !important;
-    font-family: "Oswald", arial narrow, sans-serif;
-    text-transform: uppercase;
-    font-weight: 700; }
-    .navbar a:hover {
-      color: #4163ce !important; }
-  .navbar .current {
-    color: #faf4ea !important;
-    background-color: transparent !important; }
-    .navbar .current:hover {
-      color: #EFDEC2 !important; }
-  .navbar .dropdown-menu a {
-    color: #000000 !important;
-    text-transform: none; }
+  padding-top: 1em;
+}
+.navbar .navbar-brand {
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+}
+.navbar .navbar-brand span {
+  padding-left: 0.33333em;
+  color: white;
+  line-height: 1.1810em;
+}
+.navbar a {
+  color: #ebdeb8 !important;
+  font-family: "Oswald", arial narrow, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar a:hover {
+  color: #4163ce !important;
+}
+.navbar .current {
+  color: #faf4ea !important;
+  background-color: transparent !important;
+}
+.navbar .current:hover {
+  color: #EFDEC2 !important;
+}
+.navbar .dropdown-menu a {
+  color: #000000 !important;
+  text-transform: none;
+}

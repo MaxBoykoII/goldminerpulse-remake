@@ -1,3 +1,16 @@
+@import "compass";
+@import "modular-scale";
+
+// establish vertical baseline
+$base-font-size: 21px;
+$base-line-height: 31.5px;
+@include establish-baseline;
+
+// establish scale
+$ms-base: 1em;
+$ms-ratio: 1.25;
+
+
 // colors
 $gold: #CEAC41;
 $gold-light: #DAC27C;
