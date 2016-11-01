@@ -1,6 +1,6 @@
 {
   "name": "goldminerpulse-remake",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Remake of the GoldMinerPulse site",
   "main": "server.js",
   "scripts": {
