@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HostComponent } from './components/host.component';
 import { HomeComponent } from './components/home.component';
 import { StatsComponent } from './components/stats.component';
+import { ChartsComponent } from './components/charts.component';
 
 @NgModule({
     imports: [
@@ -12,6 +13,9 @@ import { StatsComponent } from './components/stats.component';
         RouterModule.forRoot([{
             path: 'stats',
             component: StatsComponent
+        }, {
+            path: 'charts',
+            component: ChartsComponent
         }, {
             path: '',
             component: HomeComponent
@@ -24,7 +28,8 @@ import { StatsComponent } from './components/stats.component';
     declarations: [
         HostComponent,
         HomeComponent,
-        StatsComponent
+        StatsComponent,
+        ChartsComponent
     ],
     bootstrap: [HostComponent]
 })

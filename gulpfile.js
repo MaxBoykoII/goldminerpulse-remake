@@ -36,9 +36,18 @@ gulp.task('compile:ts', ['clean:dist'], () => {
         .pipe(gulp.dest('./public/dist'));
 });
 
+gulp.task('compile:scss', () => {
+    return gulp.src('./client/app/scss/**.scss')
+        .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.autoprefixer({
+            browsers: ['last 3 version', '>0.5%']
+        }))
+        .pipe(gulp.dest('./public/css'));
+});
+
 gulp.task('build', () => {
-    runSequence('clean',
-        'copy',
+    runSequence(
+        'clean', ['copy', 'compile:scss'],
         'dependencies',
         'compile:ts');
 });
