@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
+var common_1 = require('@angular/common');
 var host_component_1 = require('./components/host.component');
 var home_component_1 = require('./components/home.component');
 var stats_component_1 = require('./components/stats.component');
@@ -43,6 +44,7 @@ var AppModule = (function () {
                 stats_component_1.StatsComponent,
                 charts_component_1.ChartsComponent
             ],
+            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
             bootstrap: [host_component_1.HostComponent]
         }), 
         __metadata('design:paramtypes', [])

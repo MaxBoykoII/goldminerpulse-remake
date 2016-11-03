@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { HostComponent } from './components/host.component';
 import { HomeComponent } from './components/home.component';
@@ -31,6 +32,7 @@ import { ChartsComponent } from './components/charts.component';
         StatsComponent,
         ChartsComponent
     ],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [HostComponent]
 })
 
