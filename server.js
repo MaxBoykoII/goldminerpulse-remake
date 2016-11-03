@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/public'));
 app.use((req, res) => {
     res.redirect('/');
 });
+
 app.listen(process.env.PORT, process.env.IP, ()=> {
     console.log('The server is listening on port ' + process.env.PORT);
 });

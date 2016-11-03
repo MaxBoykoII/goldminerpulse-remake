@@ -50,7 +50,7 @@ gulp.task('compile:scss', function() {
         .pipe($.compass({
             css: './public/css',
             sass: './client/app/scss',
-            require: ['modular-scale']
+            require: ['modular-scale', 'bourbon']
         }))
         .pipe($.autoprefixer({
             browsers: ['last 3 version', '>0.5%']

@@ -20,6 +20,12 @@ body {
   }
 }
 
+p {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+}
+
 h2 {
   font-size: 1.95313em;
   line-height: 1.536em;

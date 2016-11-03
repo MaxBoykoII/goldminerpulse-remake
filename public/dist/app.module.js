@@ -11,11 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
+var http_1 = require('@angular/http');
 var common_1 = require('@angular/common');
 var host_component_1 = require('./components/host.component');
 var home_component_1 = require('./components/home.component');
 var stats_component_1 = require('./components/stats.component');
 var charts_component_1 = require('./components/charts.component');
+var content_service_1 = require('./services/content.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,6 +25,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                http_1.HttpModule,
                 router_1.RouterModule.forRoot([{
                         path: 'stats',
                         component: stats_component_1.StatsComponent
@@ -44,7 +47,7 @@ var AppModule = (function () {
                 stats_component_1.StatsComponent,
                 charts_component_1.ChartsComponent
             ],
-            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }],
+            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }, content_service_1.ContentService],
             bootstrap: [host_component_1.HostComponent]
         }), 
         __metadata('design:paramtypes', [])
