@@ -1,6 +1,6 @@
 {
   "name": "goldminerpulse-angular-front-end",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Frontend development for goldminerpulse",
   "main": "app/main.ts",
   "scripts": {
