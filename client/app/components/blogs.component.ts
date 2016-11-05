@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { ChartSection } from '../interfaces/chart-section.interface';
+import { ContentService } from '../services/content.service';
 
 @Component({
     selector: 'blogs',
@@ -6,4 +9,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./css/blogs.component.css']
 })
 
-export class BlogsComponent {}
+export class BlogsComponent implements OnInit {
+    sections: ChartSection[] = [];
+    constructor(private _contentService: ContentService) {}
+    ngOnInit(): void {
+        this._contentService.fetchBlogs().subscribe(sections => this.sections = sections);
+    }
+}

@@ -11,6 +11,11 @@ export class ContentService {
     constructor(private http: Http) {}
     private apiURL = 'https://goldminerpulse.com/ng';
 
+    fetchStats(): Observable < ChartSection[] > {
+        return this.http.get(`${this.apiURL}/confg-stats.php`)
+            .map(this.extractData)
+            .catch(this.handleError)
+    }
     fetchCharts(): Observable < ChartSection[] > {
         return this.http.get(`${this.apiURL}/config-charts.php`)
             .map(this.extractData)
@@ -21,8 +26,8 @@ export class ContentService {
             .map(this.extractData)
             .catch(this.handleError)
     }
-    fetchStats(): Observable < ChartSection[] > {
-        return this.http.get(`${this.apiURL}/confg-stats.php`)
+    fetchBlogs(): Observable < ChartSection[] > {
+        return this.http.get(`${this.apiURL}/config-blogs.php`)
             .map(this.extractData)
             .catch(this.handleError)
     }
