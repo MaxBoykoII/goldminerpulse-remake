@@ -8,6 +8,8 @@ import { HostComponent } from './components/host.component';
 import { HomeComponent } from './components/home.component';
 import { StatsComponent } from './components/stats.component';
 import { ChartsComponent } from './components/charts.component';
+import { LatestComponent } from './components/latest.component';
+import { BlogsComponent } from './components/blogs.component';
 
 import { ContentService } from './services/content.service';
 
@@ -22,6 +24,12 @@ import { ContentService } from './services/content.service';
             path: 'charts',
             component: ChartsComponent
         }, {
+            path: 'latest',
+            component: LatestComponent
+        }, {
+            path: 'blogs',
+            component: BlogsComponent
+        }, {
             path: '',
             component: HomeComponent
         }, {
@@ -34,9 +42,14 @@ import { ContentService } from './services/content.service';
         HostComponent,
         HomeComponent,
         StatsComponent,
-        ChartsComponent
+        ChartsComponent,
+        LatestComponent,
+        BlogsComponent
     ],
-    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, ContentService],
+    providers: [{
+        provide: LocationStrategy,
+        useClass: HashLocationStrategy
+    }, ContentService],
     bootstrap: [HostComponent]
 })
 

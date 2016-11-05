@@ -17,6 +17,8 @@ var host_component_1 = require('./components/host.component');
 var home_component_1 = require('./components/home.component');
 var stats_component_1 = require('./components/stats.component');
 var charts_component_1 = require('./components/charts.component');
+var latest_component_1 = require('./components/latest.component');
+var blogs_component_1 = require('./components/blogs.component');
 var content_service_1 = require('./services/content.service');
 var AppModule = (function () {
     function AppModule() {
@@ -33,6 +35,12 @@ var AppModule = (function () {
                         path: 'charts',
                         component: charts_component_1.ChartsComponent
                     }, {
+                        path: 'latest',
+                        component: latest_component_1.LatestComponent
+                    }, {
+                        path: 'blogs',
+                        component: blogs_component_1.BlogsComponent
+                    }, {
                         path: '',
                         component: home_component_1.HomeComponent
                     }, {
@@ -45,9 +53,14 @@ var AppModule = (function () {
                 host_component_1.HostComponent,
                 home_component_1.HomeComponent,
                 stats_component_1.StatsComponent,
-                charts_component_1.ChartsComponent
+                charts_component_1.ChartsComponent,
+                latest_component_1.LatestComponent,
+                blogs_component_1.BlogsComponent
             ],
-            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }, content_service_1.ContentService],
+            providers: [{
+                    provide: common_1.LocationStrategy,
+                    useClass: common_1.HashLocationStrategy
+                }, content_service_1.ContentService],
             bootstrap: [host_component_1.HostComponent]
         }), 
         __metadata('design:paramtypes', [])
