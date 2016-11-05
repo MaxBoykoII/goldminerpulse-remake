@@ -19,7 +19,8 @@ html {
       -ms-flex: 1 1 200px;
           flex: 1 1 200px;
 }
-.gallery-item img {
+.gallery-item a {
+  display: inline-block;
   width: 80%;
   height: auto;
 }

@@ -6,7 +6,7 @@
     <div class="gallery">
         <div class="gallery-item" *ngFor="let chart of section.charts">
             <figure>
-                <img [src]="chart.src" [alt]="chart.title" />
+                <a [routerLink]="['/chart', chart.id]"><img [src]="chart.src" [alt]="chart.title" /></a>
                 <figcaption>{{chart.title}}</figcaption>
             </figure>
         </div>

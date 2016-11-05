@@ -11,6 +11,7 @@ import { ChartsComponent } from './components/charts.component';
 import { LatestComponent } from './components/latest.component';
 import { BlogsComponent } from './components/blogs.component';
 import { ToolsComponent } from './components/tools.component';
+import { ChartDetailComponent } from './components/chart-detail.component';
 
 import { ContentService } from './services/content.service';
 
@@ -34,6 +35,9 @@ import { ContentService } from './services/content.service';
             path: 'tools',
             component: ToolsComponent
         }, {
+            path: 'chart/:id',
+            component: ChartDetailComponent
+        }, {
             path: '',
             component: HomeComponent
         }, {
@@ -49,7 +53,8 @@ import { ContentService } from './services/content.service';
         ChartsComponent,
         LatestComponent,
         BlogsComponent,
-        ToolsComponent
+        ToolsComponent,
+        ChartDetailComponent
     ],
     providers: [{
         provide: LocationStrategy,
