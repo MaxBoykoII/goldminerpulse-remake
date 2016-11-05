@@ -10,6 +10,7 @@ import { StatsComponent } from './components/stats.component';
 import { ChartsComponent } from './components/charts.component';
 import { LatestComponent } from './components/latest.component';
 import { BlogsComponent } from './components/blogs.component';
+import { ToolsComponent } from './components/tools.component';
 
 import { ContentService } from './services/content.service';
 
@@ -30,6 +31,9 @@ import { ContentService } from './services/content.service';
             path: 'blogs',
             component: BlogsComponent
         }, {
+            path: 'tools',
+            component: ToolsComponent
+        }, {
             path: '',
             component: HomeComponent
         }, {
@@ -44,7 +48,8 @@ import { ContentService } from './services/content.service';
         StatsComponent,
         ChartsComponent,
         LatestComponent,
-        BlogsComponent
+        BlogsComponent,
+        ToolsComponent
     ],
     providers: [{
         provide: LocationStrategy,

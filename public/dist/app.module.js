@@ -19,6 +19,7 @@ var stats_component_1 = require('./components/stats.component');
 var charts_component_1 = require('./components/charts.component');
 var latest_component_1 = require('./components/latest.component');
 var blogs_component_1 = require('./components/blogs.component');
+var tools_component_1 = require('./components/tools.component');
 var content_service_1 = require('./services/content.service');
 var AppModule = (function () {
     function AppModule() {
@@ -41,6 +42,9 @@ var AppModule = (function () {
                         path: 'blogs',
                         component: blogs_component_1.BlogsComponent
                     }, {
+                        path: 'tools',
+                        component: tools_component_1.ToolsComponent
+                    }, {
                         path: '',
                         component: home_component_1.HomeComponent
                     }, {
@@ -55,7 +59,8 @@ var AppModule = (function () {
                 stats_component_1.StatsComponent,
                 charts_component_1.ChartsComponent,
                 latest_component_1.LatestComponent,
-                blogs_component_1.BlogsComponent
+                blogs_component_1.BlogsComponent,
+                tools_component_1.ToolsComponent
             ],
             providers: [{
                     provide: common_1.LocationStrategy,
