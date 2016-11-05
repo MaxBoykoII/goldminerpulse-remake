@@ -19,7 +19,6 @@ var ChartsComponent = (function () {
         var _this = this;
         this._contentService.fetchCharts().subscribe(function (sections) {
             _this.sections = sections;
-            console.log(_this.sections);
         });
     };
     ChartsComponent = __decorate([

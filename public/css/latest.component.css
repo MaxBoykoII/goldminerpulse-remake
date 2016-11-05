@@ -1,0 +1,45 @@
+html {
+  font-size: 131.25%;
+  line-height: 1.5em;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+}
+.gallery-item img {
+  width: 80%;
+  height: auto;
+}
+.gallery-item p {
+  margin-bottom: 1.5em;
+}
+.gallery-item figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.gallery-item figcaption {
+  font-size: 0.8em;
+  line-height: 1.875em;
+  margin-top: 1.875em;
+}

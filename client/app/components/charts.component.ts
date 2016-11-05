@@ -14,7 +14,6 @@ export class ChartsComponent implements OnInit {
     ngOnInit(): void {
         this._contentService.fetchCharts().subscribe(sections => {
             this.sections = sections;
-            console.log(this.sections);
         });
     }
 }

@@ -9,16 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var content_service_1 = require('../services/content.service');
 var LatestComponent = (function () {
-    function LatestComponent() {
+    function LatestComponent(_contentService) {
+        this._contentService = _contentService;
+        this.sections = [];
     }
+    LatestComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._contentService.fetchLatest().subscribe(function (sections) { return _this.sections = sections; });
+    };
     LatestComponent = __decorate([
         core_1.Component({
             selector: 'latest',
             templateUrl: './templates/latest.component.html',
             styleUrls: ['./css/latest.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [content_service_1.ContentService])
     ], LatestComponent);
     return LatestComponent;
 }());

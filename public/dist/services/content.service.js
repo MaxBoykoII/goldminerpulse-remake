@@ -18,8 +18,17 @@ var ContentService = (function () {
         this.apiURL = 'https://goldminerpulse.com/ng';
     }
     ContentService.prototype.fetchCharts = function () {
-        console.log('calling out to:', this.apiURL + "/config-charts.php");
         return this.http.get(this.apiURL + "/config-charts.php")
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    ContentService.prototype.fetchLatest = function () {
+        return this.http.get(this.apiURL + "/config-latest.php")
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    ContentService.prototype.fetchStats = function () {
+        return this.http.get(this.apiURL + "/confg-stats.php")
             .map(this.extractData)
             .catch(this.handleError);
     };

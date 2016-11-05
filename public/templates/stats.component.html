@@ -1,1 +1,14 @@
-<h3>This is the stats component</h3>
+<h2 class="text-center">Statistics</h2>
+
+<section *ngFor="let section of sections">
+    <h3 class="text-center">{{section.title}}</h3>
+    <div class="description" [innerHTML]="section.description"></div>
+    <div class="gallery">
+        <div class="gallery-item" *ngFor="let chart of section.charts">
+            <figure>
+                <img [src]="chart.src" [alt]="chart.title" />
+                <figcaption>{{chart.title}}</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>

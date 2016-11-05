@@ -12,8 +12,17 @@ export class ContentService {
     private apiURL = 'https://goldminerpulse.com/ng';
 
     fetchCharts(): Observable < ChartSection[] > {
-        console.log('calling out to:', `${this.apiURL}/config-charts.php`);
         return this.http.get(`${this.apiURL}/config-charts.php`)
+            .map(this.extractData)
+            .catch(this.handleError)
+    }
+    fetchLatest(): Observable < ChartSection[] > {
+        return this.http.get(`${this.apiURL}/config-latest.php`)
+            .map(this.extractData)
+            .catch(this.handleError)
+    }
+    fetchStats(): Observable < ChartSection[] > {
+        return this.http.get(`${this.apiURL}/confg-stats.php`)
             .map(this.extractData)
             .catch(this.handleError)
     }
