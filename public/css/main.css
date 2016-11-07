@@ -24,6 +24,7 @@ p {
   font-size: 1em;
   line-height: 1.5em;
   margin-top: 1.5em;
+  max-width: 860px;
 }
 
 h2 {

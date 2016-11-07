@@ -17,6 +17,7 @@ body {
 p {
     @include adjust-font-size-to(ms(0));
     @include leader(1, ms(0)*1/(1em) *$base-font-size);
+    max-width: 860px;
 }
 
 h2 {
