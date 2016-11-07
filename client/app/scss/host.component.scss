@@ -41,6 +41,14 @@
         color: #000000 !important;
         text-transform: none;
     }
+    .navbar-nav {
+        display: flex;
+        float: none;
+        justify-content: center;
+        li {
+            float: none;
+        }
+    }
 }
 
 #main-container {
