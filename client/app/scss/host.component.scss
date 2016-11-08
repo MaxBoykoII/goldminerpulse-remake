@@ -9,6 +9,7 @@
     padding-top: 1em;
     padding-bottom: 1em;
     .navbar-brand {
+        background-color: darken($gold, 10%);
         text-transform: none;
         display: inline-flex;
         align-items: center;

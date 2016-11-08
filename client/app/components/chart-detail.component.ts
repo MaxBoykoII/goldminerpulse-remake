@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Chart } from '../interfaces/chart.interface';
+import { ContentService } from '../services/content.service';
 
 @Component({
     selector: 'chart',
@@ -7,5 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ChartDetailComponent implements OnInit {
-    ngOnInit(): void {}
+    chart: Chart = {
+        title: '',
+        id: '',
+        description: '',
+        tooltip: '',
+        src: ''
+    };
+    constructor(private _route: ActivatedRoute, private _contentService: ContentService) {}
+    ngOnInit(): void {
+        const id = this._route.snapshot.params['id'];
+        console.log('The id is...', id);
+        this._contentService.retrieveCache().subscribe(cache => {
+            console.log('The cache is...', cache);
+            this.chart = cache.find(chart => chart.id === id) || null;
+        });
+
+    }
 }

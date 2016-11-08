@@ -25,7 +25,7 @@ html {
   height: auto;
 }
 .gallery-item p {
-  margin-bottom: 1.5em;
+  margin-top: 3em;
 }
 .gallery-item figure {
   display: -webkit-box;

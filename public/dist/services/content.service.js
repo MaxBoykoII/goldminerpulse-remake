@@ -17,6 +17,20 @@ var ContentService = (function () {
         this.http = http;
         this.apiURL = 'https://goldminerpulse.com/ng';
     }
+    ContentService.prototype.retrieveCache = function () {
+        var _this = this;
+        if (this.cache) {
+            return Rx_1.Observable.of(this.cache);
+        }
+        else {
+            return this.http.get(this.apiURL + "/config-svg-list.php")
+                .map(function (res) {
+                _this.cache = res.json();
+                return _this.cache;
+            })
+                .catch(this.handleError);
+        }
+    };
     ContentService.prototype.fetchStats = function () {
         return this.http.get(this.apiURL + "/confg-stats.php")
             .map(this.extractData)

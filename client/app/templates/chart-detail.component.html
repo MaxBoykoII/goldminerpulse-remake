@@ -1,6 +1,10 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">Chart Title</div>
+    <div class="panel-heading">{{chart.title}}</div>
+    <div class="panel-body">
+        <img [src]="chart.src" [alt]="chart.tooltip" />
+    </div>
     <div class="paenel-footer">
+        <div [innerHTML]="chart.description"></div>
         <a class="btn btn-default" routerLink="/charts" routerLinkActive="active"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
     </div>
 </div>

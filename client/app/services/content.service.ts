@@ -9,8 +9,22 @@ import { Chart } from '../interfaces/chart.interface';
 @Injectable()
 
 export class ContentService {
-    constructor(private http: Http) {}
     private apiURL = 'https://goldminerpulse.com/ng';
+    private cache: Chart[];
+    constructor(private http: Http) {}
+    retrieveCache(): Observable < Chart[] > {
+        if (this.cache) {
+            return Observable.of(this.cache)
+        }
+        else {
+            return this.http.get(`${this.apiURL}/config-svg-list.php`)
+                .map(res => {
+                    this.cache = res.json();
+                    return this.cache;
+                })
+                .catch(this.handleError);
+        }
+    }
     fetchStats(): Observable < ChartSection[] > {
         return this.http.get(`${this.apiURL}/confg-stats.php`)
             .map(this.extractData)
@@ -31,6 +45,7 @@ export class ContentService {
             .map(this.extractData)
             .catch(this.handleError)
     }
+
     private extractData(res: Response) {
         return res.json();
     }

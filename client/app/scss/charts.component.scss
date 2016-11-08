@@ -13,7 +13,7 @@
         height: auto;
     }
     p {
-        @include trailer(1, ms(0)*1/(1em) *$base-font-size);
+        @include leader(2, ms(0)*1/(1em) *$base-font-size);
     }
     figure {
         display: flex;
