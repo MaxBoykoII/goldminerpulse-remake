@@ -12,9 +12,6 @@
         width: 80%;
         height: auto;
     }
-    p {
-        @include leader(2, ms(0)*1/(1em) *$base-font-size);
-    }
     figure {
         display: flex;
         flex-direction: column;
@@ -22,7 +19,7 @@
     }
     figcaption {
         @include adjust-font-size-to(ms(-1));
-       // @include leader(1, ms(-1)*1/(1em) *$base-font-size);
+        // @include leader(1, ms(-1)*1/(1em) *$base-font-size);
         align-self: center;
     }
 }

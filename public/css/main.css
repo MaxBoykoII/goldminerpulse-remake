@@ -32,7 +32,6 @@ h1 {
   font-family: "Oswald", arial narrow, sans-serif;
   font-size: 2.44141em;
   line-height: 1.2288em;
-  margin-top: 0.6144em;
 }
 
 h2 {
@@ -54,4 +53,17 @@ h4 {
   font-size: 1.25em;
   line-height: 1.2em;
   margin-top: 1.2em;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.description p {
+  margin-top: 1.5em;
+  margin-bottom: 3em;
 }

@@ -24,7 +24,6 @@ p {
 h1 {
     font-family: $header-font-stack;
     @include adjust-font-size-to(ms(4));
-    @include leader(1, ms(4)*1/(1em) *$base-font-size);
 }
 
 h2 {
@@ -43,4 +42,13 @@ h4 {
     font-family: $header-font-stack;
     @include adjust-font-size-to(ms(1));
     @include leader(1, ms(1)*1/(1em) *$base-font-size);
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    p {
+        @include leader(1, ms(0)*1/(1em) *$base-font-size);
+        @include trailer(2, ms(0)*1/(1em) *$base-font-size);
+    }
 }

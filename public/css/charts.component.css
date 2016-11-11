@@ -24,9 +24,6 @@ html {
   width: 80%;
   height: auto;
 }
-.gallery-item p {
-  margin-top: 3em;
-}
 .gallery-item figure {
   display: -webkit-box;
   display: -ms-flexbox;
