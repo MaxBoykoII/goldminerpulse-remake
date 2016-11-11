@@ -1,5 +1,4 @@
 @import 'config/variables';
-
 html,
 body {
     overflow-x: hidden;
@@ -7,6 +6,7 @@ body {
 
 body {
     font-size: 21px;
+    font-family: $font-stack;
     @media screen and (max-width: $mobile-breakpoint) {
         font-size: 16px;
     }
@@ -14,23 +14,33 @@ body {
     padding-left: 2em;
     padding-right: 2em;
 }
+
 p {
     @include adjust-font-size-to(ms(0));
     @include leader(1, ms(0)*1/(1em) *$base-font-size);
     max-width: 860px;
 }
 
+h1 {
+    font-family: $header-font-stack;
+    @include adjust-font-size-to(ms(4));
+    @include leader(1, ms(4)*1/(1em) *$base-font-size);
+}
+
 h2 {
+    font-family: $header-font-stack;
     @include adjust-font-size-to(ms(3));
     @include leader(1, ms(3)*1/(1em) *$base-font-size);
 }
 
 h3 {
+    font-family: $header-font-stack;
     @include adjust-font-size-to(ms(2));
     @include leader(1, ms(2)*1/(1em) *$base-font-size);
 }
 
 h4 {
+    font-family: $header-font-stack;
     @include adjust-font-size-to(ms(1));
     @include leader(1, ms(1)*1/(1em) *$base-font-size);
 }

@@ -9,16 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var HostComponent = (function () {
-    function HostComponent() {
+    function HostComponent(router) {
+        this.router = router;
     }
+    HostComponent.prototype.ngOnInit = function () {
+        this.router.events.subscribe(function (val) {
+            console.log('A router event has ocurred: ', val);
+        });
+    };
+    ;
     HostComponent = __decorate([
         core_1.Component({
             selector: 'host',
             templateUrl: './templates/host.component.html',
             styleUrls: ['./css/host.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], HostComponent);
     return HostComponent;
 }());
