@@ -12,7 +12,7 @@ html {
   padding-bottom: 1em;
 }
 .navbar .navbar-brand {
-  background-color: #af902d;
+  background-color: #BF7E37;
   text-transform: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -28,9 +28,10 @@ html {
   padding-left: 0.33333em;
   color: white;
   line-height: 1.1810em;
+  letter-spacing: 2px;
 }
 .navbar a {
-  color: #ebdeb8 !important;
+  color: #f6f0df !important;
   font-family: "Oswald", arial narrow, sans-serif;
   text-transform: uppercase;
   font-weight: 700;

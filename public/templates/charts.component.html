@@ -1,7 +1,7 @@
-<h2 class="text-center">Charts</h2>
+<h1 class="text-center">Charts</h1>
 
 <section *ngFor="let section of sections" class="well well-lg">
-    <h3 class="text-center">{{section.title}}</h3>
+    <h2 class="text-center">{{section.title}}</h2>
     <div class="description" [innerHTML]="section.description"></div>
     <div class="gallery">
         <div class="gallery-item" *ngFor="let chart of section.charts">

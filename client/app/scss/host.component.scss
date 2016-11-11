@@ -9,7 +9,7 @@
     padding-top: 1em;
     padding-bottom: 1em;
     .navbar-brand {
-        background-color: darken($gold, 10%);
+        background-color: $gold-warm;
         text-transform: none;
         display: inline-flex;
         align-items: center;
@@ -20,10 +20,11 @@
             padding-left: 1/3*1em;
             color: lighten($beige-light, 15%);
             line-height: 1.1810em;
+            letter-spacing: 2px;
         }
     }
     a {
-        color: lighten($gold-light, 15%) !important;
+        color: lighten($gold-light, 25%) !important;
         font-family: $header-font-stack;
         text-transform: uppercase;
         font-weight: 700;
