@@ -23,7 +23,8 @@ p {
 
 h1 {
     font-family: $header-font-stack;
-    @include adjust-font-size-to(ms(4));
+    @include adjust-font-size-to(ms(5));
+    @include trailer(1, ms(5)*1/(1em) *$base-font-size);
 }
 
 h2 {
@@ -42,6 +43,11 @@ h4 {
     font-family: $header-font-stack;
     @include adjust-font-size-to(ms(1));
     @include leader(1, ms(1)*1/(1em) *$base-font-size);
+}
+
+h1,
+h2 {
+    color: $dark-grey;
 }
 
 .description {

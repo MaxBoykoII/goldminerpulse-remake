@@ -1,4 +1,10 @@
 @import 'config/variables';
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
 .gallery {
     display: flex;
     flex-flow: row wrap;

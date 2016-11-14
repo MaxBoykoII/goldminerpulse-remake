@@ -31,6 +31,7 @@ html {
 .navbar a {
   color: #f6f0df !important;
   font-family: "Oswald", arial narrow, sans-serif;
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -48,7 +49,7 @@ html {
   color: #000000 !important;
   text-transform: none;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .navbar .navbar-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -63,40 +64,25 @@ html {
   }
 }
 
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: #cf975a;
+}
+
 #main-container {
   margin-right: 0;
 }
 
-/* Banner Positioning */
-.top-banner {
+/* Banner Styling */
+.bottom-banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .top-banner {
-    margin-bottom: 4.5em;
-  }
-}
-
-.side-banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 /* Footer Styles */

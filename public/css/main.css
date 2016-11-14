@@ -30,8 +30,9 @@ p {
 
 h1 {
   font-family: "Oswald", arial narrow, sans-serif;
-  font-size: 2.44141em;
-  line-height: 1.2288em;
+  font-size: 3.05176em;
+  line-height: 1.47456em;
+  margin-bottom: 0.49152em;
 }
 
 h2 {
@@ -53,6 +54,11 @@ h4 {
   font-size: 1.25em;
   line-height: 1.2em;
   margin-top: 1.2em;
+}
+
+h1,
+h2 {
+  color: #2d3033;
 }
 
 .description {

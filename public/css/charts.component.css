@@ -3,6 +3,11 @@ html {
   line-height: 1.5em;
 }
 
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
