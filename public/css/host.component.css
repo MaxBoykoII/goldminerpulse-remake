@@ -50,17 +50,19 @@ html {
   color: #000000 !important;
   text-transform: none;
 }
-.navbar .navbar-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  float: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.navbar .navbar-nav li {
-  float: none;
+@media screen and (min-width: 767px) {
+  .navbar .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar .navbar-nav li {
+    float: none;
+  }
 }
 
 #main-container {
