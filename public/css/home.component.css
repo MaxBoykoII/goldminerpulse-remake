@@ -7,4 +7,16 @@ html {
   position: relative;
   width: 100vw;
   left: calc(-50vw + 50%);
+  background-color: #4393B9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

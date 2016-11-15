@@ -3,4 +3,11 @@
     position: relative;
     width: 100vw;
     left: calc(-50vw + 50%);
+    background-color: #4393B9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
