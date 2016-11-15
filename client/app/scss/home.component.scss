@@ -1,2 +1,6 @@
 @import 'config/variables';
-
+.jumbotron {
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+}

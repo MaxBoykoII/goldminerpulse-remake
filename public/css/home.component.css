@@ -2,3 +2,9 @@ html {
   font-size: 131.25%;
   line-height: 1.5em;
 }
+
+.jumbotron {
+  position: relative;
+  width: 100vw;
+  left: calc(-50vw + 50%);
+}
