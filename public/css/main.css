@@ -11,7 +11,7 @@ body {
 body {
   font-size: 21px;
   font-family: "Open Sans", font-awesome, sans-serif;
-  margin-top: 4.5em;
+  margin-top: 3.75em;
   padding-left: 2em;
   padding-right: 2em;
 }
@@ -39,7 +39,7 @@ h2 {
   font-family: "Oswald", arial narrow, sans-serif;
   font-size: 1.95313em;
   line-height: 1.536em;
-  margin-top: 0.768em;
+  margin-top: 1.536em;
 }
 
 h3 {
@@ -72,4 +72,12 @@ h2 {
 .description p {
   margin-top: 1.5em;
   margin-bottom: 3em;
+}
+
+a {
+  color: #4393B9;
+}
+a:focus, a:hover {
+  color: #4163ce;
+  text-decoration: none;
 }

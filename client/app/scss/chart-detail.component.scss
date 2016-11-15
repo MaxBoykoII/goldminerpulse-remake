@@ -1,0 +1,18 @@
+@import 'config/variables';
+.panel {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    @include adjust-font-size-to(ms(0));
+    @include leader(1.5, ms(0)*1/(1em) *$base-font-size);
+}
+
+.panel-heading {
+    background-color: $blue-light;
+}
+
+.panel-footer {
+    .description {
+        @include adjust-font-size-to(ms(-1));
+    }
+}

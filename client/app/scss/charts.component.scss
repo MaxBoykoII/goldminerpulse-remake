@@ -1,8 +1,9 @@
 @import 'config/variables';
-
 h1 {
     text-transform: uppercase;
     letter-spacing: 5px;
+    color: $blue;
+    @include leader(1.5, ms(5)*1/(1em) *$base-font-size);
 }
 
 .gallery {
@@ -31,3 +32,5 @@ h1 {
         // @include leader(1, ms(-1)*1/(1em) *$base-font-size);
     }
 }
+
+

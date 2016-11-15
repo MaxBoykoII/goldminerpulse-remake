@@ -1,0 +1,22 @@
+html {
+  font-size: 131.25%;
+  line-height: 1.5em;
+}
+
+.panel {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 2.25em;
+}
+
+.panel-heading {
+  background-color: #4393B9;
+}
+
+.panel-footer .description {
+  font-size: 0.8em;
+  line-height: 1.875em;
+}
