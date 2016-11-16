@@ -21,11 +21,8 @@ export class ChartDetailComponent implements OnInit {
     constructor(private _route: ActivatedRoute, private _contentService: ContentService) {}
     ngOnInit(): void {
         const id = this._route.snapshot.params['id'];
-        console.log('The id is...', id);
         this._contentService.retrieveCache().subscribe(cache => {
-            console.log('The cache is...', cache);
             this.chart = cache.find(chart => chart.id === id) || null;
         });
-
     }
 }

@@ -6,6 +6,10 @@ h1 {
     @include leader(1.5, ms(5)*1/(1em) *$base-font-size);
 }
 
+h2 {
+    font-weight: 200;
+}
+
 .gallery {
     display: flex;
     flex-flow: row wrap;
@@ -33,4 +37,13 @@ h1 {
     }
 }
 
+.well {
+    background-color: #fff;
+}
 
+.breadcrumb {
+    @include adjust-font-size-to(ms(-1));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

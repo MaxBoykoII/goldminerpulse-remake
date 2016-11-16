@@ -15,8 +15,12 @@ var HostComponent = (function () {
         this.router = router;
     }
     HostComponent.prototype.ngOnInit = function () {
-        this.router.events.subscribe(function (val) {
-            console.log('A router event has ocurred: ', val);
+        var _this = this;
+        this.router.events.subscribe(function (event) {
+            if (event instanceof router_1.NavigationEnd && event.urlAfterRedirects) {
+                _this.url = event.urlAfterRedirects;
+                console.log(_this.url);
+            }
         });
     };
     ;

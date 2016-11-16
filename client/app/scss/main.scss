@@ -11,8 +11,10 @@ body {
         font-size: 16px;
     }
     @include leader(2.5);
-    padding-left: 2em;
-    padding-right: 2em;
+    @media screen and (min-width: $mobile-breakpoint + 1) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
 
 p {

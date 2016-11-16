@@ -26,9 +26,7 @@ var ChartDetailComponent = (function () {
     ChartDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         var id = this._route.snapshot.params['id'];
-        console.log('The id is...', id);
         this._contentService.retrieveCache().subscribe(function (cache) {
-            console.log('The cache is...', cache);
             _this.chart = cache.find(function (chart) { return chart.id === id; }) || null;
         });
     };

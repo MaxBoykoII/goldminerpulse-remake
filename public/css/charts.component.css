@@ -10,6 +10,10 @@ h1 {
   margin-top: 0.73728em;
 }
 
+h2 {
+  font-weight: 200;
+}
+
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,4 +57,21 @@ h1 {
 .gallery-item figcaption {
   font-size: 0.8em;
   line-height: 1.875em;
+}
+
+.well {
+  background-color: #fff;
+}
+
+.breadcrumb {
+  font-size: 0.8em;
+  line-height: 1.875em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
