@@ -12,7 +12,27 @@
 }
 
 .panel-footer {
+    .position {
+        @include adjust-font-size-to(ms(-2));
+        @include leader(0.5, ms(-2)*1/(1em) *$base-font-size);
+    }
+    .controls {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: baseline;
+        a.btn.btn-default,
+        span {
+            @include adjust-font-size-to(ms(-3));
+            @include leader(1, ms(-3)*1/(1em) *$base-font-size);
+            flex-basis: 20%;
+        }
+        a.btn.btn-default {
+            padding: em(6) em(12) em(6) em(12);
+        }
+    }
     .description {
         @include adjust-font-size-to(ms(-1));
+        @include leader(1, ms(-1)*1/(1em) *$base-font-size);
     }
 }

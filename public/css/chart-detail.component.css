@@ -16,7 +16,36 @@ html {
   background-color: #4393B9;
 }
 
+.panel-footer .position {
+  font-size: 0.64em;
+  line-height: 2.34375em;
+  margin-top: 1.17188em;
+}
+.panel-footer .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.panel-footer .controls a.btn.btn-default,
+.panel-footer .controls span {
+  font-size: 0.512em;
+  line-height: 2.92969em;
+  margin-top: 2.92969em;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+.panel-footer .controls a.btn.btn-default {
+  padding: 0.375em 0.75em 0.375em 0.75em;
+}
 .panel-footer .description {
   font-size: 0.8em;
   line-height: 1.875em;
+  margin-top: 1.875em;
 }

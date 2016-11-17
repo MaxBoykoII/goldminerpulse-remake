@@ -1,10 +1,14 @@
-<div class="panel panel-primary">
-    <div class="panel-heading text-center">{{chart.title}}</div>
-    <div class="panel-body">
-        <img [src]="chart.src" [alt]="chart.tooltip" />
+<div class="panel panel-primary" *ngIf="chart"><div class="panel-heading text-center">
+    {{chart.title}}</div>
+<div class="panel-body">
+    <img [src]="chart.src" [alt]="chart.tooltip" />
+</div>
+<div class="panel-footer">
+    <div class="controls" *ngIf="prevChart && nextChart">
+        <a class="btn btn-default" [routerLink]="['/chart', prevChart.id]"><i class="glyphicon glyphicon-chevron-left"></i> {{prevChart.title}}</a>
+        <a class="btn btn-default" [routerLink]="['/chart', nextChart.id]">{{nextChart.title}} <i class="glyphicon glyphicon-chevron-right"></i></a>
     </div>
-    <div class="panel-footer">
-        <div [innerHTML]="chart.description" class="description"></div>
-        <a class="btn btn-default" routerLink="/charts" routerLinkActive="active"><i class="glyphicon glyphicon-chevron-left"></i> Charts</a>
-    </div>
+    <div class="position text-center"> <span class="text-center">{{position}} of {{totalCharts}}</span></div>
+    <div [innerHTML]="chart.description" class="description"></div>
+</div>
 </div>

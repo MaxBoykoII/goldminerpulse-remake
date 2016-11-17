@@ -75,3 +75,6 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.breadcrumb a {
+  cursor: pointer;
+}

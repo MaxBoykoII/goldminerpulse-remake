@@ -15,19 +15,22 @@ var ChartDetailComponent = (function () {
     function ChartDetailComponent(_route, _contentService) {
         this._route = _route;
         this._contentService = _contentService;
-        this.chart = {
-            title: '',
-            id: '',
-            description: '',
-            tooltip: '',
-            src: ''
-        };
+        this.chart = null;
+        this.prevChart = null;
+        this.nextChart = null;
     }
     ChartDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         var id = this._route.snapshot.params['id'];
         this._contentService.retrieveCache().subscribe(function (cache) {
             _this.chart = cache.find(function (chart) { return chart.id === id; }) || null;
+            if (_this.chart && cache.length > 2) {
+                var index = cache.indexOf(_this.chart);
+                _this.prevChart = cache[(index === 0) ? cache.length - 1 : index - 1];
+                _this.nextChart = cache[(index === cache.length - 1) ? 0 : index + 1];
+                _this.position = index + 1;
+                _this.totalCharts = cache.length;
+            }
         });
     };
     ChartDetailComponent = __decorate([
