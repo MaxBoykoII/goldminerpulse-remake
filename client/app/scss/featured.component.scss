@@ -12,9 +12,24 @@ h1 {
     justify-content: flex-end;
 }
 
-.feature {
+.feature-content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    .chart-thumbnail {
+        flex-basis: 25%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .caption {
+            @include adjust-font-size-to(ms(-1));
+            text-align: center;
+            max-width: 100%;
+        }
+    }
+    .description {
+        flex-basis: 70%;
+        text-align: center;
+    }
 }
