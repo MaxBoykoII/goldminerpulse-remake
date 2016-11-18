@@ -5,6 +5,7 @@ import { Observable }     from 'rxjs/Rx';
 
 import { ChartSection } from '../interfaces/chart-section.interface';
 import { Chart } from '../interfaces/chart.interface';
+import { Featured } from '../interfaces/featured.interface';
 
 @Injectable()
 
@@ -35,8 +36,8 @@ export class ContentService {
             .map(this.extractData)
             .catch(this.handleError)
     }
-    fetchLatest(): Observable < ChartSection[] > {
-        return this.http.get(`${this.apiURL}/config-latest.php`)
+    fetchFeatured(): Observable < Featured > {
+        return this.http.get(`${this.apiURL}/config-featured.php`)
             .map(this.extractData)
             .catch(this.handleError)
     }

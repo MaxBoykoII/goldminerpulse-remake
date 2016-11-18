@@ -41,8 +41,8 @@ var ContentService = (function () {
             .map(this.extractData)
             .catch(this.handleError);
     };
-    ContentService.prototype.fetchLatest = function () {
-        return this.http.get(this.apiURL + "/config-latest.php")
+    ContentService.prototype.fetchFeatured = function () {
+        return this.http.get(this.apiURL + "/config-featured.php")
             .map(this.extractData)
             .catch(this.handleError);
     };

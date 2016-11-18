@@ -8,7 +8,7 @@ import { HostComponent } from './components/host.component';
 import { HomeComponent } from './components/home.component';
 import { StatsComponent } from './components/stats.component';
 import { ChartsComponent } from './components/charts.component';
-import { LatestComponent } from './components/latest.component';
+import { FeaturedComponent } from './components/featured.component';
 import { BlogsComponent } from './components/blogs.component';
 import { ToolsComponent } from './components/tools.component';
 import { ChartDetailComponent } from './components/chart-detail.component';
@@ -26,8 +26,8 @@ import { ContentService } from './services/content.service';
             path: 'charts',
             component: ChartsComponent
         }, {
-            path: 'latest',
-            component: LatestComponent
+            path: 'featured',
+            component: FeaturedComponent
         }, {
             path: 'blogs',
             component: BlogsComponent
@@ -51,7 +51,7 @@ import { ContentService } from './services/content.service';
         HomeComponent,
         StatsComponent,
         ChartsComponent,
-        LatestComponent,
+        FeaturedComponent,
         BlogsComponent,
         ToolsComponent,
         ChartDetailComponent

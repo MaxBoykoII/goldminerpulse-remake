@@ -17,7 +17,7 @@ var host_component_1 = require('./components/host.component');
 var home_component_1 = require('./components/home.component');
 var stats_component_1 = require('./components/stats.component');
 var charts_component_1 = require('./components/charts.component');
-var latest_component_1 = require('./components/latest.component');
+var featured_component_1 = require('./components/featured.component');
 var blogs_component_1 = require('./components/blogs.component');
 var tools_component_1 = require('./components/tools.component');
 var chart_detail_component_1 = require('./components/chart-detail.component');
@@ -37,8 +37,8 @@ var AppModule = (function () {
                         path: 'charts',
                         component: charts_component_1.ChartsComponent
                     }, {
-                        path: 'latest',
-                        component: latest_component_1.LatestComponent
+                        path: 'featured',
+                        component: featured_component_1.FeaturedComponent
                     }, {
                         path: 'blogs',
                         component: blogs_component_1.BlogsComponent
@@ -62,7 +62,7 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 stats_component_1.StatsComponent,
                 charts_component_1.ChartsComponent,
-                latest_component_1.LatestComponent,
+                featured_component_1.FeaturedComponent,
                 blogs_component_1.BlogsComponent,
                 tools_component_1.ToolsComponent,
                 chart_detail_component_1.ChartDetailComponent

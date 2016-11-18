@@ -88,3 +88,7 @@ a:focus, a:hover {
   color: #4163ce;
   text-decoration: none;
 }
+
+.well {
+  background-color: #fff;
+}

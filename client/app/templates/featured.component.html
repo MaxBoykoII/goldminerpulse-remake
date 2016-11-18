@@ -1,0 +1,13 @@
+<h1 class="text-center">Featured</h1>
+
+<div *ngIf="featured" class="description" [innerHTML]="featured.lead"></div>
+<div id="features-wrapper" *ngIf="featured && charts">
+    <div *ngFor="let feature of featured.features; let i = index" class="well feature">
+        <div class="date-container"><span>{{feature.date}}</span></div>
+        <div class="chart-thumbnail" *ngIf="charts[i]">
+            <img [src]="charts[i].src" [alt]="charts[i].title" />
+            <p>{{charts[i].tooltip}}</p>
+        </div>
+        <div class="description" [innerHTML]="feature.description"></div>
+    </div>
+</div>
