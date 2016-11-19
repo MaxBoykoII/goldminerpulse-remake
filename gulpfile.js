@@ -53,7 +53,7 @@ gulp.task('compile:scss', function() {
             require: ['modular-scale', 'bourbon']
         }))
         .pipe($.autoprefixer({
-            browsers: ['last 3 version', '>0.5%']
+            browsers: ['last 3 version', '>0.5%', 'iOS 7']
         }))
         .pipe(gulp.dest('./public/css'));
 });

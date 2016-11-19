@@ -10,6 +10,7 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    @include adjust-font-size-to(ms(-1));
 }
 
 .feature-content {
