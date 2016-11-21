@@ -31,14 +31,20 @@ html {
   letter-spacing: 2px;
 }
 .navbar a {
-  color: #f6f0df !important;
+  color: #f6f0df;
   font-family: "Oswald", arial narrow, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 700;
 }
 .navbar a:hover {
-  color: #4163ce !important;
+  color: #4163ce;
+}
+.navbar a.active {
+  color: rgba(230, 230, 230, 0.7);
+}
+.navbar a.active:hover {
+  color: rgba(230, 230, 230, 0.7);
 }
 .navbar .current {
   color: #faf4ea !important;

@@ -22,13 +22,19 @@
         }
     }
     a {
-        color: lighten($gold-light, 25%) !important;
+        color: lighten($gold-light, 25%);
         font-family: $header-font-stack;
         letter-spacing: 1px;
         text-transform: uppercase;
         font-weight: 700;
         &:hover {
-            color: complement($gold) !important;
+            color: complement($gold); 
+        }
+    }
+    a.active {
+        color: darken($grey,10%);
+        &:hover {
+            color: darken($grey, 10%);
         }
     }
     .current {

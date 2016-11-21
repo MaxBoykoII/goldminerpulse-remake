@@ -8,7 +8,7 @@ import { Router, Event, NavigationEnd } from '@angular/router';
 })
 
 export class HostComponent {
-  url: string; // the url of the page the user is on
+  url: string = ''; // the url of the page the user is on
   constructor(private router: Router) {}
   ngOnInit(): void {
     this.router.events.subscribe(event => {
