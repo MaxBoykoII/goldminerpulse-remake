@@ -10,15 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var _ = require('lodash');
 var HostComponent = (function () {
     function HostComponent(router) {
         this.router = router;
         this.url = '';
     }
-    HostComponent.prototype.isActive = function (route) {
-        return _.startsWith(this.url, route);
-    };
     HostComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
