@@ -16,6 +16,13 @@ html {
   background-color: #4393B9;
 }
 
+.panel-body {
+  padding: 0.9375em;
+}
+.panel-body img {
+  width: 100%;
+}
+
 .panel-footer .position {
   font-size: 0.64em;
   line-height: 2.34375em;
