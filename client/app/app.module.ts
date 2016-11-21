@@ -15,6 +15,8 @@ import { ChartDetailComponent } from './components/chart-detail.component';
 
 import { ContentService } from './services/content.service';
 
+import { TrimPipe } from './pipes/trim.pipe';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -54,7 +56,8 @@ import { ContentService } from './services/content.service';
         FeaturedComponent,
         BlogsComponent,
         ToolsComponent,
-        ChartDetailComponent
+        ChartDetailComponent,
+        TrimPipe
     ],
     providers: [{
         provide: LocationStrategy,

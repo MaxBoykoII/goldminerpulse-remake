@@ -19,16 +19,22 @@
     .controls {
         display: flex;
         width: 100%;
-        justify-content: space-between;
-        align-items: baseline;
-        a.btn.btn-default,
-        span {
-            @include adjust-font-size-to(ms(-3));
-            @include leader(1, ms(-3)*1/(1em) *$base-font-size);
-            flex-basis: 20%;
+        justify-content: space-around;
+        @media screen and (max-width: $mobile-breakpoint) {
+            flex-wrap: wrap
         }
-        a.btn.btn-default {
-            padding: em(6) em(12) em(6) em(12);
+        a {
+            @include adjust-font-size-to(ms(-2));
+            @include leader(1, ms(-2)*1/(1em) *$base-font-size);
+            flex: 1 1;
+            padding: em(6) em(8) em(6) em(18);
+            display: flex;
+            word-wrap: break-word;
+            align-items: center;
+            justify-content: center;
+            span {
+                flex: 1 1;
+            }
         }
     }
     .description {

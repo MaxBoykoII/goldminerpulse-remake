@@ -22,6 +22,7 @@ var blogs_component_1 = require('./components/blogs.component');
 var tools_component_1 = require('./components/tools.component');
 var chart_detail_component_1 = require('./components/chart-detail.component');
 var content_service_1 = require('./services/content.service');
+var trim_pipe_1 = require('./pipes/trim.pipe');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -65,7 +66,8 @@ var AppModule = (function () {
                 featured_component_1.FeaturedComponent,
                 blogs_component_1.BlogsComponent,
                 tools_component_1.ToolsComponent,
-                chart_detail_component_1.ChartDetailComponent
+                chart_detail_component_1.ChartDetailComponent,
+                trim_pipe_1.TrimPipe
             ],
             providers: [{
                     provide: common_1.LocationStrategy,
