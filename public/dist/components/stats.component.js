@@ -14,10 +14,21 @@ var StatsComponent = (function () {
     function StatsComponent(_contentService) {
         this._contentService = _contentService;
         this.sections = [];
+        this.charts = [];
     }
+    StatsComponent.prototype.getById = function (id) {
+        return this.charts.find(function (chart) { return chart.id === id; });
+    };
     StatsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._contentService.fetchStats().subscribe(function (sections) { return _this.sections = sections; });
+        this._contentService.fetchStats().subscribe(function (sections) {
+            _this.sections = sections;
+            var ids = sections.map(function (section) { return section.chart_ids; }).reduce(function (ids1, ids2) { return ids1.concat(ids2); });
+            _this._contentService.retrieveCache().subscribe(function (cache) {
+                _this.charts = ids.map(function (id) { return cache.find(function (chart) { return chart.id === id; }); });
+                console.log(_this.charts);
+            });
+        });
     };
     StatsComponent = __decorate([
         core_1.Component({

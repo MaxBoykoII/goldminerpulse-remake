@@ -1,4 +1,8 @@
 @import 'config/variables';
+table {
+    max-width: 100%;
+}
+
 thead {
     background-color: $gold;
     color: lighten($gold-light, 25%)

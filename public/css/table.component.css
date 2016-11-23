@@ -3,6 +3,10 @@ html {
   line-height: 1.5em;
 }
 
+table {
+  max-width: 100%;
+}
+
 thead {
   background-color: #CEAC41;
   color: #f6f0df;

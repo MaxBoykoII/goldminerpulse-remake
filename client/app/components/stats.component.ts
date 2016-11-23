@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { StatSection } from '../interfaces/stat-section.interface';
+import { Chart } from '../interfaces/chart.interface';
 import { ContentService } from '../services/content.service';
 
 @Component({
@@ -11,8 +12,19 @@ import { ContentService } from '../services/content.service';
 
 export class StatsComponent implements OnInit {
   sections: StatSection[] = [];
+  charts: Chart[] = [];
   constructor(private _contentService: ContentService) {}
+  getById(id: string): Chart {
+    return this.charts.find(chart => chart.id === id);
+  }
   ngOnInit(): void {
-    this._contentService.fetchStats().subscribe(sections => this.sections = sections);
+    this._contentService.fetchStats().subscribe(sections => {
+      this.sections = sections;
+      const ids = sections.map(section => section.chart_ids).reduce((ids1, ids2) => ids1.concat(ids2));
+      this._contentService.retrieveCache().subscribe(cache => {
+        this.charts = ids.map(id => cache.find(chart => chart.id === id));
+        console.log(this.charts);
+      })
+    });
   }
 }

@@ -1,10 +1,18 @@
-<h1 class="text-center">Statistics</h1>
+<h1 class="text-center">Stats</h1>
 <ol class="breadcrumb hidden-xs">
     <li *ngFor="let section of sections"><a href="/">{{section.title}}</a></li>
 </ol>
 <section *ngFor="let section of sections" class="well">
     <h2 class="text-center">{{section.title}}</h2>
     <div class="description" [innerHTML]="section.description"></div>
+    <div class="gallery" *ngIf="charts.length">
+        <div class="gallery-item" *ngFor="let id of section.chart_ids">
+            <figure *ngIf="getById(id)">
+                <a [routerLink]="['/chart', id]"><img [src]="getById(id).src" [alt]="getById(id).title" /></a>
+                <figcaption>{{getById(id).title}}</figcaption>
+            </figure>
+        </div>
+    </div>
     <div *ngFor="let table of section.tables">
         <stat-table [title]="table.title" [description]="table.description" [headers]="table.headers" [rows]="table.rows"></stat-table>
     </div>
