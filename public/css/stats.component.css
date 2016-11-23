@@ -3,50 +3,28 @@ html {
   line-height: 1.5em;
 }
 
-.gallery {
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #336699;
+  margin-top: 0.73728em;
+}
+
+.breadcrumb {
+  font-size: 0.8em;
+  line-height: 1.875em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-
-.gallery-item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 200px;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
-}
-.gallery-item img {
-  width: 80%;
-  height: auto;
-}
-.gallery-item p {
-  margin-bottom: 1.5em;
-}
-.gallery-item figure {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.gallery-item figcaption {
-  font-size: 0.8em;
-  line-height: 1.875em;
-  margin-top: 1.875em;
+.breadcrumb a {
+  cursor: pointer;
 }

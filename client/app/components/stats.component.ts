@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ChartSection } from '../interfaces/chart-section.interface';
+import { StatSection } from '../interfaces/stat-section.interface';
 import { ContentService } from '../services/content.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ContentService } from '../services/content.service';
 })
 
 export class StatsComponent implements OnInit {
-  sections: ChartSection[] = [];
+  sections: StatSection[] = [];
   constructor(private _contentService: ContentService) {}
   ngOnInit(): void {
     this._contentService.fetchStats().subscribe(sections => this.sections = sections);

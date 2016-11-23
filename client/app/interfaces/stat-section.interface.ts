@@ -1,6 +1,6 @@
 import { Table } from './table.interface';
 
-export interface StatsSection {
+export interface StatSection {
     title: string;
     id: string;
     description: string;

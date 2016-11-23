@@ -1,26 +1,17 @@
 @import 'config/variables';
-.gallery {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: $blue;
+    @include leader(1.5, ms(5)*1/(1em) *$base-font-size);
 }
 
-.gallery-item {
-    flex: 1 1 200px;
-    img {
-        width: 80%;
-        height: auto;
-    }
-    p {
-        @include trailer(1, ms(0)*1/(1em) *$base-font-size);
-    }
-    figure {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    figcaption {
-        @include adjust-font-size-to(ms(-1));
-        @include leader(1, ms(-1)*1/(1em) *$base-font-size);
+.breadcrumb {
+    @include adjust-font-size-to(ms(-1));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    a {
+        cursor: pointer;
     }
 }

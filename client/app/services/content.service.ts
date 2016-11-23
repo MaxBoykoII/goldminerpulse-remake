@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { Observable }     from 'rxjs/Rx';
 
 import { ChartSection } from '../interfaces/chart-section.interface';
+import { StatSection } from '../interfaces/stat-section.interface';
 import { Chart } from '../interfaces/chart.interface';
 import { Featured } from '../interfaces/featured.interface';
 
@@ -26,8 +27,8 @@ export class ContentService {
                 .catch(this.handleError);
         }
     }
-    fetchStats(): Observable < ChartSection[] > {
-        return this.http.get(`${this.apiURL}/confg-stats.php`)
+    fetchStats(): Observable < StatSection[] > {
+        return this.http.get(`${this.apiURL}/config-stats.php`)
             .map(this.extractData)
             .catch(this.handleError)
     }

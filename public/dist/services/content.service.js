@@ -32,7 +32,7 @@ var ContentService = (function () {
         }
     };
     ContentService.prototype.fetchStats = function () {
-        return this.http.get(this.apiURL + "/confg-stats.php")
+        return this.http.get(this.apiURL + "/config-stats.php")
             .map(this.extractData)
             .catch(this.handleError);
     };

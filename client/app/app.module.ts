@@ -12,6 +12,7 @@ import { FeaturedComponent } from './components/featured.component';
 import { BlogsComponent } from './components/blogs.component';
 import { ToolsComponent } from './components/tools.component';
 import { ChartDetailComponent } from './components/chart-detail.component';
+import { TableComponent } from './components/table.component';
 
 import { ContentService } from './services/content.service';
 
@@ -57,6 +58,7 @@ import { TrimPipe } from './pipes/trim.pipe';
         BlogsComponent,
         ToolsComponent,
         ChartDetailComponent,
+        TableComponent,
         TrimPipe
     ],
     providers: [{
