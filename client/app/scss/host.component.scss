@@ -48,7 +48,7 @@
         color: #000000 !important;
         text-transform: none;
     }
-    @media screen and (min-width: $mobile-breakpoint + 1px) {
+    @media screen and (min-width: $medium-breakpoint) {
         .navbar-nav {
             display: flex;
             float: none;
