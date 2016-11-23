@@ -33,6 +33,11 @@ h1 {
     }
 }
 
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
 .breadcrumb {
     @include adjust-font-size-to(ms(-1));
     display: flex;

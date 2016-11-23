@@ -8,7 +8,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let row of rows">
-            <td *ngFor="let item of row">{{item}}</td>
+            <td *ngFor="let item of row; let i = index" [ngClass]="{'text-right': i !== 0, 'right-padding': i !== 0}">{{item}}</td>
         </tr>
     </tbody>
 </table>

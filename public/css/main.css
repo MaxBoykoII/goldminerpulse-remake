@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  text-rendering: optimizeLegibility;
+}
+
 body {
   font-size: 21px;
   font-family: "Open Sans", font-awesome, sans-serif;

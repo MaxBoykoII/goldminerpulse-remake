@@ -13,7 +13,7 @@
             </figure>
         </div>
     </div>
-    <div *ngFor="let table of section.tables">
+    <div *ngFor="let table of section.tables" class="table-container">
         <stat-table [title]="table.title" [description]="table.description" [headers]="table.headers" [rows]="table.rows"></stat-table>
     </div>
 </section>

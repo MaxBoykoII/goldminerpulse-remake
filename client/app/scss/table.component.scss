@@ -1,9 +1,16 @@
 @import 'config/variables';
 table {
+    @include adjust-font-size-to(ms(-1));
     max-width: 100%;
 }
 
 thead {
     background-color: $gold;
     color: lighten($gold-light, 25%)
+}
+
+td.right-padding {
+    @media screen and (min-width: $mobile-breakpoint + 1px) {
+        padding-right: 2em;
+    }
 }

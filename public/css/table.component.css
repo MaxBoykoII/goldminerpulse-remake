@@ -4,10 +4,18 @@ html {
 }
 
 table {
+  font-size: 0.8em;
+  line-height: 1.875em;
   max-width: 100%;
 }
 
 thead {
   background-color: #CEAC41;
   color: #f6f0df;
+}
+
+@media screen and (min-width: 768px) {
+  td.right-padding {
+    padding-right: 2em;
+  }
 }
