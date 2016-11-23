@@ -8,7 +8,7 @@
     <div class="gallery" *ngIf="charts.length">
         <div class="gallery-item" *ngFor="let id of section.chart_ids">
             <figure *ngIf="getById(id)">
-                <a [routerLink]="['/chart', id]"><img [src]="getById(id).src" [alt]="getById(id).title" /></a>
+                <a [routerLink]="['/chart', id]" data-toggle="tooltip" [title]="getById(id).tooltip"><img [src]="getById(id).src" [alt]="getById(id).title" /></a>
                 <figcaption>{{getById(id).title}}</figcaption>
             </figure>
         </div>
