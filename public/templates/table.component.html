@@ -1,2 +1,14 @@
 <h3 class="text-center">{{title}}</h3>
 <div class="description" [innerHTML]="description"></div>
+<table class="table table-striped table-hover table-condensed table-responsive">
+    <thead>
+        <tr>
+            <td *ngFor="let header of headers">{{header}}</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows">
+            <td *ngFor="let item of row">{{item}}</td>
+        </tr>
+    </tbody>
+</table>
