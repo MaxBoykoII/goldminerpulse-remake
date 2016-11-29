@@ -14,13 +14,15 @@ var HostComponent = (function () {
     function HostComponent(router) {
         this.router = router;
         this.url = '';
+        this.current = 0;
+        this.numBanners = 5;
     }
     HostComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.router.events.subscribe(function (event) {
             if (event instanceof router_1.NavigationEnd && event.urlAfterRedirects) {
                 _this.url = event.urlAfterRedirects;
-                console.log(_this.url);
+                _this.current = Math.floor(Math.random() * _this.numBanners);
             }
         });
     };

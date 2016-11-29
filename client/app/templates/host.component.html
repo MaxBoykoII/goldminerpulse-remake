@@ -36,9 +36,22 @@
     </div>
     <div class="row">
         <div class="col-sm-12 bottom-banner hidden-xs">
-            <!--Please note that changes to this code are not permitted. Should the code be manipulated in any way, bwin.party partners reserves the right to block the account.-->
-
-            <iframe id="partners1749466" name="partners1749466" src="https://mediaserver.bwinpartypartners.com/renderBanner.do?zoneId=1749466&t=f&v=1&securedDomain=y" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="728" height="90"></iframe>
+            <div *ngIf="current === 0">
+                <!--Please note that changes to this code are not permitted. Should the code be manipulated in any way, bwin.party partners reserves the right to block the account.-->
+                <iframe id="partners1749466" name="partners1749466" src="https://mediaserver.bwinpartypartners.com/renderBanner.do?zoneId=1749466&t=f&v=1&securedDomain=y" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="728" height="90"></iframe>
+            </div>
+            <div *ngIf="current === 1">
+                <iframe id="partners1700015" name="partners1700015" src="https://mediaserver.bwinpartypartners.com/renderBanner.do?zoneId=1700015&t=f&v=1&securedDomain=y" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="728" height="90"></iframe>
+            </div>
+            <div *ngIf="current === 2">
+                <iframe id="partners1700016" name="partners1700016" src="https://mediaserver.bwinpartypartners.com/renderBanner.do?zoneId=1700016&t=f&v=1&securedDomain=y" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="728" height="90"></iframe>
+            </div>
+            <div *ngIf="current === 3">
+                <iframe id="partners1749603" name="partners1749603" src="https://mediaserver.bwinpartypartners.com/renderBanner.do?zoneId=1749603&t=f&v=1&securedDomain=y" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="728" height="90"></iframe>
+            </div>
+            <div *ngIf="current === 4">
+                <iframe id="partners1735657" name="partners1735657" src="https://mediaserver.bwinpartypartners.com/renderBanner.do?zoneId=1735657&t=f&v=1&securedDomain=y" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="728" height="90"></iframe>
+            </div>
         </div>
         <div class="col-xs-12 bottom-banner visible-xs">
             <iframe id="partners1751004" name="partners1751004" src="https://mediaserver.bwinpartypartners.com/renderBanner.do?zoneId=1751004&t=f&v=1&securedDomain=y" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" width="468" height="60"></iframe>
