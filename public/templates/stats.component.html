@@ -1,8 +1,8 @@
 <h1 class="text-center">Stats</h1>
 <ol class="breadcrumb hidden-xs">
-    <li *ngFor="let section of sections"><a href="/">{{section.title}}</a></li>
+    <li *ngFor="let section of sections"><a (click)="toId(section.id)">{{section.title}}</a></li>
 </ol>
-<section *ngFor="let section of sections" class="well">
+<section *ngFor="let section of sections" class="well" [id]="section.id">
     <h2 class="text-center">{{section.title}}</h2>
     <div class="description" [innerHTML]="section.description"></div>
     <div class="gallery" *ngIf="charts.length">

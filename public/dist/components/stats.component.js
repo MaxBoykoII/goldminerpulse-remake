@@ -9,15 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var content_service_1 = require('../services/content.service');
 var StatsComponent = (function () {
-    function StatsComponent(_contentService) {
+    function StatsComponent(_contentService, router) {
         this._contentService = _contentService;
+        this.router = router;
         this.sections = [];
         this.charts = [];
     }
     StatsComponent.prototype.getById = function (id) {
         return this.charts.find(function (chart) { return chart.id === id; });
+    };
+    StatsComponent.prototype.toId = function (id) {
+        this.router.navigate(['/stats'], {
+            fragment: id
+        });
+        setTimeout(function () {
+            var anchor = window.location.hash.substring(7);
+            document.querySelector(anchor).scrollIntoView();
+        });
     };
     StatsComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -36,7 +47,7 @@ var StatsComponent = (function () {
             templateUrl: './templates/stats.component.html',
             styleUrls: ['./css/stats.component.css']
         }), 
-        __metadata('design:paramtypes', [content_service_1.ContentService])
+        __metadata('design:paramtypes', [content_service_1.ContentService, router_1.Router])
     ], StatsComponent);
     return StatsComponent;
 }());
