@@ -19,6 +19,10 @@ export class ChartsComponent implements OnInit {
         this.router.navigate(['/charts'], {
             fragment: id
         });
+        setTimeout(() => {
+          const anchor = window.location.hash.substring(8);
+          document.querySelector(anchor).scrollIntoView();
+        });
     }
     ngOnInit(): void {
         this._contentService.fetchCharts().subscribe(sections => {

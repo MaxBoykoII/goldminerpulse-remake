@@ -21,6 +21,10 @@ var ChartsComponent = (function () {
         this.router.navigate(['/charts'], {
             fragment: id
         });
+        setTimeout(function () {
+            var anchor = window.location.hash.substring(8);
+            document.querySelector(anchor).scrollIntoView();
+        });
     };
     ChartsComponent.prototype.ngOnInit = function () {
         var _this = this;
