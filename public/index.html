@@ -30,7 +30,8 @@
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<!-- 3. Configure SystemJS -->
+<!-- 3. Configure SystemJS  (dev) -->
+<!--
 <script src="./systemjs.config.js"></script>
 <script>
     System.import('app').catch(function(err) {
@@ -38,4 +39,8 @@
     });
 </script>
 
+-->
+
+<!-- 4. Add aot build (prod) -->
+<script src="./dist/build.js"></script>
 </html>

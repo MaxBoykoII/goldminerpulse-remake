@@ -64,3 +64,19 @@ gulp.task('build', () => {
         'dependencies',
         'compile:ts');
 });
+
+/*
+ * Task for compiling scss as a precursor to AOT
+ */
+ gulp.task('aot:scss', () => {
+    gulp.src('./client-aot/app/scss/*.scss')
+        .pipe($.compass({
+            css: './client-aot/app/components/css',
+            sass: './client-aot/app/scss',
+            require: ['modular-scale', 'bourbon']
+        }))
+        .pipe($.autoprefixer({
+            browsers: ['last 3 version', '>0.5%', 'iOS 7']
+        }))
+        .pipe(gulp.dest('./client-aot/app/components/css'));
+});
