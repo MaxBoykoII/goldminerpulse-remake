@@ -85,16 +85,19 @@ html {
 
 /* Banner Styling */
 .bottom-banner {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.bottom-banner .banner-container {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 }
 
 /* Footer Styles */

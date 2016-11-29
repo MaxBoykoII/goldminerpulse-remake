@@ -73,10 +73,13 @@
 /* Banner Styling */
 
 .bottom-banner {
-    display: flex;
-    justify-content: center;
     @include leader(1);
     @include trailer(1);
+    .banner-container {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+    }
 }
 
 
