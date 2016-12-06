@@ -24,13 +24,47 @@ html {
           justify-content: center;
 }
 
+.callouts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) and (max-width: 1115px) {
+  .callouts {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .callout {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 30%;
   padding: 1.25em;
   margin: 0.625em;
-  border: 0.0625em solid #eee;
+  border: 0.125em solid #eee;
   border-left-width: 0.3125em;
   border-radius: 0.1875em;
   border-left-color: #e8d8a6;
+}
+@media screen and (min-width: 768px) and (max-width: 1115px) {
+  .callout {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
 }
 .callout h2 {
   margin-top: 0;

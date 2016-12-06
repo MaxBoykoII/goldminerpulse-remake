@@ -12,9 +12,21 @@
     justify-content: center;
 }
 
-
+.callouts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @media screen and (min-width: $mobile-breakpoint + 1px) and (max-width: 1115px) {
+        justify-content: center;
+    }
+}
 
 .callout {
+    flex-grow: 1;
+    min-width: 30%;
+    @media screen and (min-width: $mobile-breakpoint + 1px) and (max-width: 1115px) {
+        flex-grow: 0;
+    }
     h2 {
         margin-top: 0;
         @include adjust-font-size-to(ms(1));
@@ -26,7 +38,7 @@
     }
     padding: em(20px);
     margin: em(10px);
-    border: em(1px) solid #eee;
+    border: em(2px) solid #eee;
     border-left-width: em(5px);
     border-radius: em(3px);
     border-left-color: lighten($gold, 25%);
