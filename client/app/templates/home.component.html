@@ -9,7 +9,7 @@
     </div>
 </div>
 <div class="callouts">
-        <div class="callout" *ngFor="let descriptor of page.descriptors">
+        <div class="callout" *ngFor="let descriptor of page.descriptors" (click)="navigate(descriptor.route)">
             <h2 class="text-center hook">{{descriptor.hook}}</h2>
             <p class="text-center">{{descriptor.details}}</p>
         </div>

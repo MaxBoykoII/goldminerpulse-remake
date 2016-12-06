@@ -16,17 +16,15 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    @media screen and (min-width: $mobile-breakpoint + 1px) and (max-width: 1115px) {
-        justify-content: center;
+    .callout {
+        flex-grow: 1;
+        min-width: 30%;
+        max-width: 65%;
     }
 }
 
 .callout {
-    flex-grow: 1;
-    min-width: 30%;
-    @media screen and (min-width: $mobile-breakpoint + 1px) and (max-width: 1115px) {
-        flex-grow: 0;
-    }
+    cursor: pointer;
     h2 {
         margin-top: 0;
         @include adjust-font-size-to(ms(1));

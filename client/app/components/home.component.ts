@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Home } from '../interfaces/home.interface';
 import { homeData } from '../mocks/home'; // use mock data for now
@@ -11,4 +12,8 @@ import { homeData } from '../mocks/home'; // use mock data for now
 
 export class HomeComponent {
     page: Home = homeData;
+    constructor(private router: Router) {}
+    navigate(route: string) {
+        this.router.navigate([route]);
+    }
 }

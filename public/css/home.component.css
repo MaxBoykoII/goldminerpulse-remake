@@ -36,35 +36,23 @@ html {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-@media screen and (min-width: 768px) and (max-width: 1115px) {
-  .callouts {
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.callout {
+.callouts .callout {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   min-width: 30%;
+  max-width: 65%;
+}
+
+.callout {
+  cursor: pointer;
   padding: 1.25em;
   margin: 0.625em;
   border: 0.125em solid #eee;
   border-left-width: 0.3125em;
   border-radius: 0.1875em;
   border-left-color: #e8d8a6;
-}
-@media screen and (min-width: 768px) and (max-width: 1115px) {
-  .callout {
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-  }
 }
 .callout h2 {
   margin-top: 0;

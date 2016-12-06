@@ -3,6 +3,7 @@
  */
 
 export interface Descriptor {
+    route?: string;
     hook: string;
     details: string;
 }
