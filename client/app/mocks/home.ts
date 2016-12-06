@@ -7,7 +7,14 @@ export const homeData: Home = {
         hook: 'Find clues about the trend',
         details: 'Please visit our chart section.'
     }, {
-        hook: 'Discover Critical Stats',
+        hook: 'Learn about the industry',
         details: 'Learn more about important stats by visting our stats page.'
+    }, {
+        hook: 'Get updates on developing trends',
+        details: 'Please visit our featured page.'
+    },
+    {
+        hook: 'Uncover hidden gems',
+        details: 'Please visit our tools page'
     }]
 };

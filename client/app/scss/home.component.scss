@@ -12,23 +12,20 @@
     justify-content: center;
 }
 
-.callouts {
-    @media screen and (min-width: $mobile-breakpoint + 1px) {
-        display: flex;
-        justify-content: space-around;
-    }
-}
+
 
 .callout {
     h2 {
         margin-top: 0;
-        @include adjust-font-size-to(ms(2));
+        @include adjust-font-size-to(ms(1));
+        font-weight: 500;
     }
     p {
-         @include leader(1, ms(-1)*1/(1em) *$base-font-size);
-         @include adjust-font-size-to(ms(-1));
+        @include leader(1, ms(-1)*1/(1em) *$base-font-size);
+        @include adjust-font-size-to(ms(-1));
     }
     padding: em(20px);
+    margin: em(10px);
     border: em(1px) solid #eee;
     border-left-width: em(5px);
     border-radius: em(3px);

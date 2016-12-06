@@ -24,20 +24,9 @@ html {
           justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
-  .callouts {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-  }
-}
-
 .callout {
   padding: 1.25em;
+  margin: 0.625em;
   border: 0.0625em solid #eee;
   border-left-width: 0.3125em;
   border-radius: 0.1875em;
@@ -45,8 +34,9 @@ html {
 }
 .callout h2 {
   margin-top: 0;
-  font-size: 1.5625em;
-  line-height: 1.92em;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  font-weight: 500;
 }
 .callout p {
   margin-top: 1.875em;
