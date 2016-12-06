@@ -24,6 +24,13 @@ html {
           justify-content: center;
 }
 
+.welcome-statement {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  max-width: 860px;
+}
+
 .callouts {
   display: -webkit-box;
   display: -webkit-flex;

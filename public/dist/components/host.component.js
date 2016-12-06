@@ -10,10 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var footer_1 = require('../mocks/footer');
 var HostComponent = (function () {
     function HostComponent(router) {
         this.router = router;
         this.url = '';
+        this.footer = footer_1.footer;
         this.current = 0;
         this.numBanners = 5;
     }
