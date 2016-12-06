@@ -23,3 +23,33 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+@media screen and (min-width: 768px) {
+  .callouts {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+}
+
+.callout {
+  padding: 1.25em;
+  border: 0.0625em solid #eee;
+  border-left-width: 0.3125em;
+  border-radius: 0.1875em;
+  border-left-color: #e8d8a6;
+}
+.callout h2 {
+  margin-top: 0;
+  font-size: 1.5625em;
+  line-height: 1.92em;
+}
+.callout p {
+  margin-top: 1.875em;
+  font-size: 0.8em;
+  line-height: 1.875em;
+}

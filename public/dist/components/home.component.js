@@ -9,8 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var home_1 = require('../mocks/home');
 var HomeComponent = (function () {
     function HomeComponent() {
+        this.page = home_1.homeData;
     }
     HomeComponent = __decorate([
         core_1.Component({
