@@ -26,10 +26,17 @@ var ChartsComponent = (function () {
             document.querySelector(anchor).scrollIntoView();
         });
     };
+    ChartsComponent.prototype.getById = function (id) {
+        return this.charts.find(function (chart) { return chart.id === id; });
+    };
     ChartsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._contentService.fetchCharts().subscribe(function (sections) {
             _this.sections = sections;
+            var ids = sections.map(function (section) { return section.chart_ids; }).reduce(function (ids1, ids2) { return ids1.concat(ids2); });
+            _this._contentService.retrieveCache().subscribe(function (cache) {
+                _this.charts = ids.map(function (id) { return cache.find(function (chart) { return chart.id === id; }); });
+            });
         });
     };
     ChartsComponent = __decorate([

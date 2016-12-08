@@ -37,7 +37,6 @@ var StatsComponent = (function () {
             var ids = sections.map(function (section) { return section.chart_ids; }).reduce(function (ids1, ids2) { return ids1.concat(ids2); });
             _this._contentService.retrieveCache().subscribe(function (cache) {
                 _this.charts = ids.map(function (id) { return cache.find(function (chart) { return chart.id === id; }); });
-                console.log(_this.charts);
             });
         });
     };

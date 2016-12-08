@@ -4,5 +4,5 @@ export interface ChartSection {
     interface: string;
     id: string;
     description: string;
-    charts: Chart[];
+    chart_ids: string[];
 }

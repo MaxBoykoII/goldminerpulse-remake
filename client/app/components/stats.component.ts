@@ -36,8 +36,7 @@ export class StatsComponent implements OnInit {
       const ids = sections.map(section => section.chart_ids).reduce((ids1, ids2) => ids1.concat(ids2));
       this._contentService.retrieveCache().subscribe(cache => {
         this.charts = ids.map(id => cache.find(chart => chart.id === id));
-        console.log(this.charts);
-      })
+      });
     });
   }
 }
