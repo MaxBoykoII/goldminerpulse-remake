@@ -5,11 +5,11 @@
 <section *ngFor="let section of sections" class="well well-lg" [id]="section.id">
     <h2 class="text-center">{{section.title}}</h2>
     <div class="description" [innerHTML]="section.description"></div>
-    <div class="gallery">
-        <div class="gallery-item" *ngFor="let chart of section.charts">
-            <figure>
-                <a [routerLink]="['/chart', chart.id]" data-toggle="tooltip" [title]="chart.tooltip"><img [src]="chart.src" [alt]="chart.title" /></a>
-                <figcaption>{{chart.title}}</figcaption>
+    <div class="gallery" *ngIf="charts.length">
+        <div class="gallery-item" *ngFor="let id of section.chart_ids">
+            <figure *ngIf="getById(id)">
+                <a [routerLink]="['/chart', id]" data-toggle="tooltip" [title]="getById(id).tooltip"><img [src]="getById(id).src" [alt]="getById(id).title" /></a>
+                <figcaption>{{getById(id).title}}</figcaption>
             </figure>
         </div>
     </div>

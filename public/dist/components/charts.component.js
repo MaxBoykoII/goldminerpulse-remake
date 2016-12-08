@@ -16,6 +16,7 @@ var ChartsComponent = (function () {
         this._contentService = _contentService;
         this.router = router;
         this.sections = [];
+        this.charts = [];
     }
     ChartsComponent.prototype.toId = function (id) {
         this.router.navigate(['/charts'], {
@@ -35,7 +36,8 @@ var ChartsComponent = (function () {
             _this.sections = sections;
             var ids = sections.map(function (section) { return section.chart_ids; }).reduce(function (ids1, ids2) { return ids1.concat(ids2); });
             _this._contentService.retrieveCache().subscribe(function (cache) {
-                _this.charts = ids.map(function (id) { return cache.find(function (chart) { return chart.id === id; }); });
+                _this.charts = ids.map(function (id) { return cache.find(function (chart) { return chart.id === id; }); }).filter(function (chart) { return chart !== undefined; });
+                console.log('retrieved charts:', _this.charts);
             });
         });
     };

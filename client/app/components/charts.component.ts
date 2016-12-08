@@ -12,7 +12,7 @@ import { ChartSection } from '../interfaces/chart-section.interface';
 })
 export class ChartsComponent implements OnInit {
     sections: ChartSection[] = [];
-    charts: Chart[];
+    charts: Chart[] = [];
     constructor(private _contentService: ContentService, private router: Router) {}
     toId(id:string): void {
         /*
@@ -34,7 +34,8 @@ export class ChartsComponent implements OnInit {
             this.sections = sections;
             const ids = sections.map(section => section.chart_ids).reduce((ids1, ids2) => ids1.concat(ids2));
             this._contentService.retrieveCache().subscribe(cache => {
-            this.charts = ids.map(id => cache.find(chart => chart.id === id));
+            this.charts = ids.map(id => cache.find(chart => chart.id === id)).filter(chart => chart !== undefined);
+            console.log('retrieved charts:', this.charts);
       });
         });
     }
