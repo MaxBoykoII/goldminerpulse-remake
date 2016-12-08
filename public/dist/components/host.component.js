@@ -10,17 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var footer_1 = require('../mocks/footer');
+var content_service_1 = require('../services/content.service');
 var HostComponent = (function () {
-    function HostComponent(router) {
+    function HostComponent(router, _contentService) {
         this.router = router;
+        this._contentService = _contentService;
         this.url = '';
-        this.footer = footer_1.footer;
         this.current = 0;
         this.numBanners = 5;
     }
     HostComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this._contentService.fetchHost().subscribe(function (footer) { return _this.footer = footer; });
         this.router.events.subscribe(function (event) {
             if (event instanceof router_1.NavigationEnd && event.urlAfterRedirects) {
                 _this.url = event.urlAfterRedirects;
@@ -35,7 +36,7 @@ var HostComponent = (function () {
             templateUrl: './templates/host.component.html',
             styleUrls: ['./css/host.component.css']
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, content_service_1.ContentService])
     ], HostComponent);
     return HostComponent;
 }());

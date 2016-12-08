@@ -31,6 +31,11 @@ var ContentService = (function () {
                 .catch(this.handleError);
         }
     };
+    ContentService.prototype.fetchHost = function () {
+        return this.http.get(this.apiURL + "/config-host.php")
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
     ContentService.prototype.fetchHome = function () {
         return this.http.get(this.apiURL + "/config-home.php")
             .map(this.extractData)

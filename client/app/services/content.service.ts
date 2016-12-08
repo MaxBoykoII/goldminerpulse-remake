@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable }     from 'rxjs/Rx';
 
+import { Footer } from '../interfaces/footer.interface';
 import { Home } from '../interfaces/home.interface';
 import { ChartSection } from '../interfaces/chart-section.interface';
 import { StatSection } from '../interfaces/stat-section.interface';
@@ -27,6 +28,11 @@ export class ContentService {
                 })
                 .catch(this.handleError);
         }
+    }
+    fetchHost(): Observable < Footer > {
+        return this.http.get(`${this.apiURL}/config-host.php`)
+            .map(this.extractData)
+            .catch(this.handleError);
     }
     fetchHome(): Observable < Home > {
         return this.http.get(`${this.apiURL}/config-home.php`)
