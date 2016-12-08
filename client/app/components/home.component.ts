@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Home } from '../interfaces/home.interface';
-import { homeData } from '../mocks/home'; // use mock data for now
+import { ContentService } from '../services/content.service';
 
 @Component({
     selector: 'home',
@@ -10,10 +10,13 @@ import { homeData } from '../mocks/home'; // use mock data for now
     templateUrl: './templates/home.component.html'
 })
 
-export class HomeComponent {
-    page: Home = homeData;
-    constructor(private router: Router) {}
-    navigate(route: string) {
+export class HomeComponent implements OnInit {
+    page: Home;
+    constructor(private router: Router, private _contentService: ContentService) {}
+    navigate(route: string): void {
         this.router.navigate([route]);
+    }
+    ngOnInit(): void {
+        this._contentService.fetchHome().subscribe(data => this.page = data);
     }
 }

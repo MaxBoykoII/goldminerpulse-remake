@@ -10,14 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var home_1 = require('../mocks/home');
+var content_service_1 = require('../services/content.service');
 var HomeComponent = (function () {
-    function HomeComponent(router) {
+    function HomeComponent(router, _contentService) {
         this.router = router;
-        this.page = home_1.homeData;
+        this._contentService = _contentService;
     }
     HomeComponent.prototype.navigate = function (route) {
         this.router.navigate([route]);
+    };
+    HomeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._contentService.fetchHome().subscribe(function (data) { return _this.page = data; });
     };
     HomeComponent = __decorate([
         core_1.Component({
@@ -25,7 +29,7 @@ var HomeComponent = (function () {
             styleUrls: ['./css/home.component.css'],
             templateUrl: './templates/home.component.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, content_service_1.ContentService])
     ], HomeComponent);
     return HomeComponent;
 }());

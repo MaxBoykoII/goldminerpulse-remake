@@ -15,7 +15,7 @@ var Rx_1 = require('rxjs/Rx');
 var ContentService = (function () {
     function ContentService(http) {
         this.http = http;
-        this.apiURL = 'https://goldminerpulse.com/ng';
+        this.apiURL = 'https://www.goldminerpulse.com/ngd';
     }
     ContentService.prototype.retrieveCache = function () {
         var _this = this;
@@ -30,6 +30,11 @@ var ContentService = (function () {
             })
                 .catch(this.handleError);
         }
+    };
+    ContentService.prototype.fetchHome = function () {
+        return this.http.get(this.apiURL + "/config-home.php")
+            .map(this.extractData)
+            .catch(this.handleError);
     };
     ContentService.prototype.fetchStats = function () {
         return this.http.get(this.apiURL + "/config-stats.php")

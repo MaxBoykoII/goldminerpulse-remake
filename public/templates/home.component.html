@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="page">
     <div class="row">
         <div class="col-xs-12 jumbotron">
             <h1 class="text-center">{{page.tagline}}</h1>
@@ -8,7 +8,7 @@
         </div>
     </div>
 </div>
-<div class="callouts">
+<div class="callouts" *ngIf="page">
         <div class="callout" *ngFor="let descriptor of page.descriptors" (click)="navigate(descriptor.route)">
             <h2 class="text-center hook">{{descriptor.hook}}</h2>
             <p class="text-center">{{descriptor.details}}</p>
